@@ -34,7 +34,7 @@ public class Lapiseira {
 	}
 
     public void mudarPonta(String tipo){
-        this.tipoGrafite = tipo;
+        this.setTipoGrafite(tipo);
         System.out.println("Grafite mudado para tipo " + tipo);
     }
 
