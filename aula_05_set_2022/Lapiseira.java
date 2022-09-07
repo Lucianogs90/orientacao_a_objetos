@@ -8,6 +8,14 @@ public class Lapiseira {
 	protected float tamanhoGrafite;
 	private String tipoGrafite;
 	
+	public String getTipoGrafite() {
+		return tipoGrafite;
+	}
+
+	public void setTipoGrafite(String tipoGrafite) {
+		this.tipoGrafite = tipoGrafite;
+	}
+
 	public void carregar() {
 		this.carregada = true;
         System.out.println("Lapiseira carregada!");
