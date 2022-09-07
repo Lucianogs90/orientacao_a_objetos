@@ -51,7 +51,9 @@ public class Aula {
 
         a1.ativar_aula();
         a1.mostrar_status();
+
         System.out.println("");
+        
         a1.desativar_aula();
         a1.mostrar_status();
 
