@@ -15,6 +15,62 @@ public class Aula {
     public int sala;
     private boolean ativa;
 
+    public LocalDate getData(){
+        return this.data;
+    }
+
+    public void setData(LocalDate data){
+        this.data = data;
+    }
+
+    public ZonedDateTime getHorario(){
+        return this.horario;
+    }
+
+    public void setHorario(ZonedDateTime horario){
+        this.horario = horario;
+    }
+
+    public String getTurma(){
+        return this.turma;
+    }
+
+    public void setTurma(String turma){
+        this.turma = turma;
+    }
+
+    public String getCurso(){
+        return this.curso;
+    }
+
+    public void setCurso(String curso){
+        this.curso = curso;
+    }
+
+    public String getBloco(){
+        return this.bloco;
+    }
+
+    public void setBloco(String bloco){
+        this.bloco = bloco;
+    }
+    
+    public int getSala(){
+        return this.sala;
+    }
+
+    public void setSala(int sala){
+        this.sala = sala;
+    }
+
+    public boolean getAtiva(){
+        return this.ativa;
+    }
+
+    public void setAtiva(boolean ativa){
+        this.ativa = ativa;
+    }
+
     public void ativar_aula(){
         this.ativa = true;
     }
