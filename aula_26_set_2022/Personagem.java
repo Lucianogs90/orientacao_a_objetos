@@ -83,19 +83,20 @@ public class Personagem{
 
     public int causeDamage(Personagem enemy){
         Random rng = new Random();
+
         int dmg = this.atk;
 
         if(rng.nextDouble() < this.critRate){
             dmg = (int) Math.round(this.atk * (1 + this.critDmg));
         }
 
-        dmg = dmg * (1-(enemy.def / (enemy.def + 100)));
+        int damage = dmg - ((dmg * enemy.getDef()) / (enemy.getDef() + 750));
 
-        System.out.println("dano de " + dmg);
-
-        enemy.hp -= dmg;
-
-        return dmg;
+        enemy.hp -= damage;
+        
+        System.out.println("dano de " + damage);
+        
+        return damage;
     }
 
 }
