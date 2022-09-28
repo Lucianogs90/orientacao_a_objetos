@@ -13,6 +13,7 @@ public class Personagem{
     public double critDamage = 0.5;
     private int finalDamage = 0;
     public double agility = 0.15;
+    private boolean alive = true;
 
     public Personagem(){
         
@@ -106,6 +107,14 @@ public class Personagem{
         this.finalDamage = finalDamage;
     }
 
+    public boolean isAlive() {
+        return alive;
+    }
+
+    public void setAlive(boolean alive) {
+        this.alive = alive;
+    }
+
     public int causeDamage(Personagem enemy){
         Random rng = new Random();
 
@@ -133,7 +142,13 @@ public class Personagem{
             realDamage *= 0.5;
         }
 
-        this.hp -= realDamage;
+        this.setHp(this.hp - realDamage);
+        
+        if(this.hp <= 0){
+            System.out.println(this.finalName + " morreu!");
+            this.setAlive(false);
+            return realDamage;
+        }
 
         return realDamage;
     }
