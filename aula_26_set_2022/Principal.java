@@ -5,15 +5,18 @@ public class Principal {
         Personagem p1 = new Personagem();
         Personagem p2 = new Personagem("Enemy", 3000, 1300, 2000, 50);
 
-        p2.def = 500;
+        p2.setFinalName("Karinto");
+        p2.def = 600;
+        p2.setDashRate(0.5);
 
-        p1.setStart_name("Slime");
-        p1.final_name = "Slime Master";
+        p1.setStartName("Slime");
+        p1.finalName = "Slime Master";
         p1.setAtk(2200);
         p1.critRate = 0.5;
         p1.setCritDmg(1.5);
-        p1.causeDamage(p2);
+        
+        System.out.println("Dano do ataque em " + p2.getFinalName() + ": " + p1.causeDamage(p2));
 
-        System.out.println("novo hp do Enemy = " + p2.hp);
+        System.out.println("novo hp de " + p2.getFinalName() + ":" + p2.hp);
     }
 }
