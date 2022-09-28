@@ -10,10 +10,9 @@ public class Personagem{
     protected int def = 300;
     protected int spd = 50;
     public double critRate = 0.15;
-    public double critDmg = 0.5;
+    public double critDamage = 0.5;
     private int finalDamage = 0;
-    
-    public double dashRate = 0.15;
+    public double agility = 0.15;
 
     public Personagem(){
         
@@ -84,19 +83,19 @@ public class Personagem{
     }
 
     public double getCritDmg() {
-        return critDmg;
+        return critDamage;
     }
 
     public void setCritDmg(double critDmg) {
-        this.critDmg = critDmg;
+        this.critDamage = critDmg;
     }
 
-    public double getDashRate() {
-        return dashRate;
+    public double getAgility() {
+        return agility;
     }
 
-    public void setDashRate(double dashRate) {
-        this.dashRate = dashRate;
+    public void setAgility(double agility) {
+        this.agility = agility;
     }
 
     public int getFinalDamage() {
@@ -113,7 +112,7 @@ public class Personagem{
         int basicDamage = this.atk;
 
         if(rng.nextDouble() < this.critRate){
-            basicDamage = (int) Math.round(this.atk * (1.0 + this.critDmg));
+            basicDamage = (int) Math.round(this.atk * (1.0 + this.critDamage));
         }
 
         this.finalDamage = basicDamage - ((basicDamage * enemy.getDef()) / (enemy.getDef() + 700));
@@ -128,7 +127,7 @@ public class Personagem{
         
         int realDamage = enemy.finalDamage;
 
-        if(rng.nextDouble() < this.dashRate){
+        if(rng.nextDouble() < this.agility){
             System.out.println(this.finalName + " se esquivou e recebeu apenas metade do dano!");
 
             realDamage *= 0.5;

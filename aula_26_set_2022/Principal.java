@@ -7,7 +7,7 @@ public class Principal {
 
         p2.setFinalName("Karinto");
         p2.def = 600;
-        p2.setDashRate(0.5);
+        p2.setAgility(0.5);
 
         p1.setStartName("Slime");
         p1.finalName = "Slime Master";
