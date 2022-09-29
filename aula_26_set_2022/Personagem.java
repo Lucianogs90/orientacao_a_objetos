@@ -2,7 +2,7 @@ package aula_26_set_2022;
 
 import java.util.Random;
 
-public class Personagem{
+public class Personagem {
     private String startName = "Hero";
     public String finalName = "Super Hero";
     protected int hp = 8000;
@@ -15,8 +15,8 @@ public class Personagem{
     public double agility = 0.15;
     private boolean alive = true;
 
-    public Personagem(){
-        
+    public Personagem() {
+
     }
 
     public Personagem(String startName, int hp, int atk, int def, int spd) {
@@ -47,7 +47,7 @@ public class Personagem{
         return this.hp;
     }
 
-    public void setHp(int hp){
+    public void setHp(int hp) {
         this.hp = hp;
     }
 
@@ -115,12 +115,12 @@ public class Personagem{
         this.alive = alive;
     }
 
-    public int causeDamage(Personagem enemy){
+    public int causeDamage(Personagem enemy) {
         Random rng = new Random();
 
         int basicDamage = this.atk;
 
-        if(rng.nextDouble() < this.critRate){
+        if (rng.nextDouble() < this.critRate) {
             basicDamage = (int) Math.round(this.atk * (1.0 + this.critDamage));
         }
 
@@ -131,20 +131,20 @@ public class Personagem{
         return this.finalDamage;
     }
 
-    public int receiveDamage(Personagem enemy){
+    public int receiveDamage(Personagem enemy) {
         Random rng = new Random();
-        
+
         int realDamage = enemy.finalDamage;
 
-        if(rng.nextDouble() < this.agility){
+        if (rng.nextDouble() < this.agility) {
             System.out.println(this.finalName + " se esquivou e recebeu apenas metade do dano!");
 
             realDamage *= 0.5;
         }
 
         this.setHp(this.hp - realDamage);
-        
-        if(this.hp <= 0){
+
+        if (this.hp <= 0) {
             System.out.println(this.finalName + " morreu!");
             this.setAlive(false);
             return realDamage;
