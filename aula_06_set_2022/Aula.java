@@ -1,4 +1,4 @@
-package aula_06_set_2022.ifro;
+package aula_06_set_2022;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
