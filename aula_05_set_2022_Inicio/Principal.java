@@ -1,4 +1,4 @@
-package aula_05_set_2022;
+package aula_05_set_2022_Inicio;
 
 public class Principal {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package aula_06_set_2022;
+package aula_06_set_2022_Metodos_Especiais;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

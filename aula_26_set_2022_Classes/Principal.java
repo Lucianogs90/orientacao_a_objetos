@@ -1,4 +1,4 @@
-package aula_26_set_2022;
+package aula_26_set_2022_Classes;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
